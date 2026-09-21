@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,32 +21,32 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#05070a;
-    color:white;
+    font-family:Arial,sans-serif;
+    background:#090d10;
+    color:#ffffff;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
+    background:#101820;
+    padding:15px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 5%;
-    background:rgba(3,5,8,.96);
-    border-bottom:1px solid rgba(0,217,255,.25);
-    box-shadow:0 5px 25px rgba(0,0,0,.5);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid #00e5ff;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.logo span{
-    color:#00d9ff;
+    font-size:25px;
+    font-weight:bold;
+    color:#00e5ff;
 }
 
 nav{
@@ -53,182 +55,82 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     font-weight:bold;
-    transition:.2s;
 }
 
 nav a:hover{
-    color:#00d9ff;
+    color:#00e5ff;
 }
 
-.menu{
+.menu-btn{
     display:none;
     font-size:28px;
     cursor:pointer;
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    min-height:calc(100vh - 70px);
-    padding:35px 20px 80px;
+    min-height:430px;
+    padding:50px 5%;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
+
     background:
-        radial-gradient(
-            circle at 50% 35%,
-            #073b52 0%,
-            #06131b 30%,
-            #05070a 62%,
-            #000 100%
-        );
-    overflow:hidden;
+    linear-gradient(
+        rgba(0,0,0,.72),
+        rgba(0,0,0,.80)
+    ),
+    url("Img.jpg") center/cover no-repeat;
 }
 
 .hero-content{
-    width:100%;
-    max-width:1200px;
-}
-
-.image-frame{
-    position:relative;
-    width:100%;
-    max-width:950px;
-    margin:0 auto 35px;
-    padding:12px;
-    border-radius:35px;
-    background:
-        linear-gradient(
-            135deg,
-            #00d9ff,
-            #146cff,
-            #8b2cff,
-            #ff7b00,
-            #00d9ff
-        );
-    box-shadow:
-        0 0 20px rgba(0,217,255,.35),
-        0 0 50px rgba(0,100,255,.20),
-        0 20px 70px rgba(0,0,0,.6);
-    overflow:hidden;
-}
-
-.image-frame::before{
-    content:"";
-    position:absolute;
-    inset:3px;
-    border-radius:31px;
-    border:1px solid rgba(255,255,255,.45);
-    pointer-events:none;
-    z-index:2;
-}
-
-.image-frame::after{
-    content:"";
-    position:absolute;
-    width:45%;
-    height:180%;
-    top:-40%;
-    left:-70%;
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.25),
-            transparent
-        );
-    transform:rotate(25deg);
-    animation:shine 5s infinite;
-    pointer-events:none;
-    z-index:3;
-}
-
-@keyframes shine{
-    0%{left:-70%;}
-    45%{left:130%;}
-    100%{left:130%;}
-}
-
-.hero-image{
-    position:relative;
-    display:block;
-    width:100%;
-    height:auto;
-    border-radius:27px;
-    mix-blend-mode:screen;
-    z-index:1;
-    filter:
-        contrast(1.04)
-        saturate(1.06);
+    max-width:800px;
 }
 
 .hero h1{
-    font-size:clamp(40px,7vw,78px);
-    font-weight:900;
+    font-size:45px;
     margin-bottom:15px;
-    letter-spacing:1px;
-    text-shadow:
-        0 0 20px rgba(0,217,255,.25);
+    color:#00e5ff;
 }
 
-.hero h1 span{
-    color:#00d9ff;
-}
-
-.hero-text{
-    max-width:850px;
-    margin:0 auto 30px;
-    color:#ddd;
-    font-size:clamp(18px,3vw,25px);
-    line-height:1.5;
-}
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:15px;
+.hero p{
+    font-size:19px;
+    line-height:1.6;
+    margin-bottom:25px;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 25px;
-    border-radius:30px;
+    padding:13px 22px;
+    margin:5px;
+    background:#00e5ff;
+    color:#001014;
     text-decoration:none;
-    font-weight:900;
-    transition:.25s;
-    border:1px solid transparent;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px) scale(1.02);
+    transform:scale(1.05);
+    background:#ffffff;
 }
 
-.btn-products{
-    background:#00d9ff;
-    color:#001015;
-    box-shadow:
-        0 0 20px rgba(0,217,255,.25);
-}
 
-.btn-whatsapp{
-    background:#20c967;
-    color:white;
-    box-shadow:
-        0 0 20px rgba(32,201,103,.2);
-}
+/* =========================
+   PRODUCTOS
+========================= */
 
-section{
-    padding:65px 5%;
-}
-
-.container{
-    width:100%;
-    max-width:1400px;
-    margin:auto;
+#productos{
+    padding:50px 5%;
 }
 
 .section-title{
@@ -237,232 +139,239 @@ section{
 }
 
 .section-title h2{
-    font-size:clamp(30px,5vw,45px);
-    margin-bottom:10px;
+    color:#00e5ff;
+    font-size:35px;
 }
 
 .section-title p{
-    color:#aaa;
+    margin-top:10px;
+    color:#bfc7cc;
 }
 
-#productos{
-    background:
-        radial-gradient(
-            circle at top,
-            #071820,
-            #080a0d 55%,
-            #050608
-        );
-}
+
+/* =========================
+   FILTROS
+========================= */
 
 .filters{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:10px;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 .filter-btn{
-    background:#151a1f;
-    color:white;
-    border:1px solid #303841;
-    padding:11px 18px;
-    border-radius:30px;
+    background:#151d22;
+    color:#ffffff;
+    border:1px solid #00e5ff;
+    padding:9px 15px;
+    border-radius:20px;
     cursor:pointer;
-    font-weight:bold;
-    transition:.2s;
 }
 
 .filter-btn:hover,
 .filter-btn.active{
-    background:#00d9ff;
-    color:#001015;
-    border-color:#00d9ff;
-    box-shadow:
-        0 0 15px rgba(0,217,255,.2);
+    background:#00e5ff;
+    color:#001014;
 }
 
-.search{
-    display:block;
-    width:100%;
-    max-width:600px;
-    margin:0 auto 35px;
-    padding:16px 22px;
-    border-radius:30px;
-    border:2px solid #292f36;
-    outline:none;
-    background:#12161a;
-    color:white;
-    font-size:16px;
-}
 
-.search:focus{
-    border-color:#00d9ff;
-    box-shadow:
-        0 0 15px rgba(0,217,255,.12);
-}
-
-.search::placeholder{
-    color:#777;
-}
+/* =========================
+   GRID
+========================= */
 
 .products{
     display:grid;
     grid-template-columns:
-        repeat(auto-fill,minmax(230px,1fr));
+    repeat(auto-fit,minmax(230px,1fr));
     gap:22px;
 }
 
+
+/* =========================
+   TARJETAS
+========================= */
+
 .product{
-    background:
-        linear-gradient(
-            145deg,
-            #151a1f,
-            #0c0f12
-        );
-    border:1px solid #293039;
-    border-radius:18px;
+    background:#11181d;
+    border:1px solid #26343b;
+    border-radius:12px;
     overflow:hidden;
-    transition:.25s;
+    transition:.3s;
 }
 
 .product:hover{
-    transform:translateY(-6px);
-    border-color:#00d9ff;
-    box-shadow:
-        0 12px 35px rgba(0,217,255,.12);
+    transform:translateY(-5px);
+    border-color:#00e5ff;
 }
+
+
+/* =================================================
+   1.jpg
+   ESTA NO SE TOCA
+   MANTIENE EL RECORTE ANTERIOR
+================================================= */
+
+.first-product-image{
+    width:100%;
+    height:220px;
+    background:#080c0f;
+    position:relative;
+    overflow:hidden;
+}
+
+.first-product-image img{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:auto;
+
+    max-width:none;
+    display:block;
+}
+
+
+/* =================================================
+   2.jpg - 3.jpg - 4.jpg - 5.jpg
+   RECORTE MÁS SUAVE
+================================================= */
 
 .product-image{
-    height:220px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    color:#68727b;
-    font-weight:bold;
-    background:
-        linear-gradient(
-            135deg,
-            #20262c,
-            #0b0e11
-        );
-    border-bottom:1px solid #252b31;
+    width:100%;
+    height:250px;
+    background:#080c0f;
+    position:relative;
+    overflow:hidden;
 }
 
-.product-image .icon{
-    font-size:45px;
-    margin-bottom:10px;
+.product-image img{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:auto;
+
+    max-width:none;
+    display:block;
 }
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
 
 .product-info{
-    padding:18px;
+    padding:17px;
 }
 
-.product-category{
-    color:#00d9ff;
-    font-size:12px;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.product h3{
-    margin:8px 0;
+.product-info h3{
     font-size:18px;
-    min-height:42px;
+    margin-bottom:8px;
+    color:#ffffff;
+}
+
+.category{
+    color:#00e5ff;
+    font-size:13px;
+    margin-bottom:8px;
 }
 
 .price{
-    font-size:24px;
-    font-weight:900;
-    margin:14px 0;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
-.buy{
+.buy-btn{
     width:100%;
     border:none;
-    border-radius:10px;
-    padding:13px 8px;
-    background:#20c967;
-    color:white;
-    font-weight:900;
+    padding:12px;
+    border-radius:7px;
+    background:#00e5ff;
+    color:#001014;
+    font-weight:bold;
     cursor:pointer;
-    transition:.2s;
+    font-size:15px;
 }
 
-.buy:hover{
-    background:#18ad58;
-    transform:translateY(-2px);
+.buy-btn:hover{
+    background:#ffffff;
 }
 
-.about{
-    background:#101419;
-}
 
-.about-box{
-    max-width:900px;
-    margin:auto;
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.placeholder{
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    color:#d0d0d0;
-    font-size:18px;
-    line-height:1.8;
+    color:#5e6b72;
+    font-weight:bold;
+    padding:20px;
 }
+
+
+/* =========================
+   CONTACTO
+========================= */
 
 #contacto{
-    background:
-        linear-gradient(
-            135deg,
-            #071a24,
-            #08090b
-        );
+    padding:50px 5%;
+    background:#0d1419;
     text-align:center;
 }
 
-.socials{
+#contacto h2{
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.contact-buttons{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
-    margin-top:25px;
+    gap:10px;
+    margin-top:20px;
 }
 
-.social{
-    display:inline-block;
-    padding:13px 20px;
-    border-radius:30px;
-    background:#171b20;
-    color:white;
+.contact-buttons a{
     text-decoration:none;
-    font-weight:bold;
-    border:1px solid #292f35;
-    transition:.2s;
 }
 
-.social:hover{
-    border-color:#00d9ff;
-    transform:translateY(-2px);
-}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#020304;
-    color:#777;
-    text-align:center;
+    background:#06090b;
     padding:25px;
-}
-
-.no-results{
-    grid-column:1/-1;
     text-align:center;
-    color:#777;
-    padding:50px;
+    color:#89959b;
+    border-top:1px solid #1d2b31;
 }
 
-@media(max-width:750px){
+footer strong{
+    color:#00e5ff;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:700px){
 
     header{
-        padding:14px 5%;
+        padding:13px 5%;
     }
 
     nav{
@@ -470,38 +379,33 @@ footer{
         position:absolute;
         top:65px;
         left:0;
-        right:0;
-        background:#080a0d;
+        width:100%;
+        background:#101820;
         flex-direction:column;
-        padding:20px;
         text-align:center;
+        padding:20px;
+        gap:18px;
+        border-bottom:1px solid #00e5ff;
     }
 
     nav.show{
         display:flex;
     }
 
-    .menu{
+    .menu-btn{
         display:block;
     }
 
     .hero{
-        padding-top:20px;
-        min-height:auto;
+        min-height:390px;
     }
 
-    .image-frame{
-        padding:7px;
-        border-radius:22px;
-        margin-bottom:25px;
+    .hero h1{
+        font-size:32px;
     }
 
-    .image-frame::before{
-        border-radius:19px;
-    }
-
-    .hero-image{
-        border-radius:17px;
+    .hero p{
+        font-size:16px;
     }
 
     .products{
@@ -509,27 +413,20 @@ footer{
         gap:12px;
     }
 
-    .product-image{
-        height:170px;
-    }
-
     .product-info{
         padding:12px;
     }
 
-    .product h3{
+    .product-info h3{
         font-size:15px;
     }
 
     .price{
-        font-size:19px;
+        font-size:18px;
     }
 
-    .buy{
-        font-size:12px;
-        padding:11px 5px;
-    }
 }
+
 
 @media(max-width:430px){
 
@@ -537,31 +434,53 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .product-image{
-        height:210px;
-    }
-
 }
 
+
+/* =========================
+   IMÁGENES
+========================= */
+
+/*
+   1.jpg:
+   mantiene su recorte anterior de 220px.
+
+   2.jpg:
+   3.jpg:
+   4.jpg:
+   5.jpg:
+
+   tienen 250px para que se vea más
+   producto y se recorte menos.
+*/
+
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="logo">
-        DOC <span>BROWN TECH</span>
+        DOC BROWN TECH
     </div>
 
     <div
-        class="menu"
-        onclick="toggleMenu()"
-    >
+        class="menu-btn"
+        onclick="toggleMenu()">
+
         ☰
+
     </div>
 
-    <nav id="nav">
+    <nav id="menu">
 
         <a href="#inicio">
             Inicio
@@ -579,461 +498,637 @@ footer{
 
 </header>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section
     class="hero"
-    id="inicio"
->
+    id="inicio">
 
     <div class="hero-content">
 
-        <div class="image-frame">
-
-            <img
-                src="Img.jpg"
-                alt="DOC BROWN TECH - Accesorios para celulares"
-                class="hero-image"
-            >
-
-        </div>
-
         <h1>
-            DOC <span>BROWN TECH</span>
+            DOC BROWN TECH
         </h1>
 
-        <p class="hero-text">
-
-            Todo lo que tu celular necesita,
-            en un solo lugar.
-
-            <br>
-
-            Tecnología, accesorios y productos
-            para llevar tu experiencia al siguiente nivel.
-
+        <p>
+            Accesorios para celulares,
+            tecnología y productos
+            para tu día a día.
         </p>
 
-        <div class="buttons">
+        <a
+            class="btn"
+            href="https://wa.me/5491144041909">
 
-            <a
-                href="#productos"
-                class="btn btn-products"
-            >
-                🛒 VER PRODUCTOS
-            </a>
+            📲 Ordená vía WhatsApp aquí
 
-            <a
-                id="heroWhatsapp"
-                href="#"
-                target="_blank"
-                class="btn btn-whatsapp"
-            >
-                💬 ORDENÁ VÍA WHATSAPP AQUÍ
-            </a>
+        </a>
 
-        </div>
+        <a
+            class="btn"
+            href="#productos">
+
+            🛒 Ver productos
+
+        </a>
 
     </div>
 
 </section>
+
+
+
+<!-- =========================
+     PRODUCTOS
+========================= -->
 
 <section id="productos">
 
-    <div class="container">
+    <div class="section-title">
 
-        <div class="section-title">
+        <h2>
+            🛒 Nuestros productos
+        </h2>
 
-            <h2>
-                Nuestros productos
-            </h2>
+        <p>
+            Elegí tu producto y realizá
+            tu pedido fácilmente.
+        </p>
 
-            <p>
-                Elegí lo que necesitás y consultá directamente por WhatsApp.
-            </p>
+    </div>
 
-        </div>
 
-        <div class="filters">
+    <div class="filters">
 
-            <button
-                class="filter-btn active"
-                onclick="filtrar('Todos',this)"
-            >
-                Todos
-            </button>
+        <button
+            class="filter-btn active"
+            onclick="filtrar('Todos',this)">
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Cargadores',this)"
-            >
-                🔌 Cargadores
-            </button>
+            Todos
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Auriculares',this)"
-            >
-                🎧 Auriculares
-            </button>
+        </button>
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Fundas',this)"
-            >
-                📱 Fundas
-            </button>
+        <button
+            class="filter-btn"
+            onclick="filtrar('Cargadores',this)">
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Cables',this)"
-            >
-                🔗 Cables
-            </button>
+            Cargadores
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Adaptadores',this)"
-            >
-                🔌 Adaptadores
-            </button>
+        </button>
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Power Banks',this)"
-            >
-                🔋 Power Banks
-            </button>
+        <button
+            class="filter-btn"
+            onclick="filtrar('Auriculares',this)">
 
-            <button
-                class="filter-btn"
-                onclick="filtrar('Gaming',this)"
-            >
-                🎮 Gaming
-            </button>
+            Auriculares
 
-        </div>
+        </button>
 
-        <input
-            id="buscador"
-            class="search"
-            type="text"
-            placeholder="🔎 Buscar un producto..."
-            oninput="buscar()"
-        >
+        <button
+            class="filter-btn"
+            onclick="filtrar('Fundas',this)">
 
-        <div
-            id="productosContainer"
-            class="products"
-        ></div>
+            Fundas
+
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filtrar('Cables',this)">
+
+            Cables
+
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filtrar('Adaptadores',this)">
+
+            Adaptadores
+
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filtrar('Power Banks',this)">
+
+            Power Banks
+
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filtrar('Gaming',this)">
+
+            Gaming
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        class="products"
+        id="products">
 
     </div>
 
 </section>
 
-<section class="about">
 
-    <div class="container">
 
-        <div class="section-title">
-
-            <h2>
-                Tecnología sin límites
-            </h2>
-
-        </div>
-
-        <div class="about-box">
-
-            <p>
-
-                En
-                <strong>DOC BROWN TECH</strong>
-                encontrás accesorios para celulares
-                y productos tecnológicos para todos los días.
-
-            </p>
-
-            <br>
-
-            <p>
-
-                Elegí el producto que buscás,
-                presioná
-                <strong>
-                    "COMPRÁ AQUÍ VÍA WHATSAPP"
-                </strong>
-                y contactate directamente con el vendedor.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+<!-- =========================
+     CONTACTO
+========================= -->
 
 <section id="contacto">
 
-    <div class="container">
+    <h2>
+        📞 Contacto
+    </h2>
 
-        <div class="section-title">
+    <p>
+        ¿Querés realizar una consulta
+        o comprar un producto?
+    </p>
 
-            <h2>
-                Contacto
-            </h2>
+    <div class="contact-buttons">
 
-            <p>
-                ¿Tenés alguna consulta? Escribinos.
-            </p>
+        <a
+            class="btn"
+            href="https://wa.me/5491144041909">
 
-        </div>
+            📲 WhatsApp
 
-        <div class="buttons">
+        </a>
 
-            <a
-                id="contactWhatsapp"
-                href="#"
-                target="_blank"
-                class="btn btn-whatsapp"
-            >
-                💬 ESCRIBINOS POR WHATSAPP
-            </a>
+        <a
+            class="btn"
+            href="#productos">
 
-        </div>
+            🛒 Ver productos
 
-        <div class="socials">
-
-            <a
-                href="#"
-                target="_blank"
-                class="social"
-            >
-                📘 Facebook
-            </a>
-
-            <a
-                href="#"
-                target="_blank"
-                class="social"
-            >
-                🎵 TikTok
-            </a>
-
-            <a
-                href="#"
-                target="_blank"
-                class="social"
-            >
-                📸 Instagram
-            </a>
-
-        </div>
+        </a>
 
     </div>
 
 </section>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    © 2026 DOC BROWN TECH
-    — Accesorios para celulares
+    <p>
+        © 2026
+        <strong>
+            DOC BROWN TECH
+        </strong>
+    </p>
+
+    <p>
+        Accesorios y tecnología
+        para celulares
+    </p>
 
 </footer>
 
+
+
 <script>
 
-/* =========================
-   WHATSAPP
-========================= */
-
-/*
-   WhatsApp de DOC BROWN TECH
-
-   Número:
-   +54 9 11 4404-1909
-
-   Sin +, espacios ni guiones.
-*/
 
 const NUMERO_WHATSAPP =
-    "5491144041909";
+"5491144041909";
 
 
 /* =========================
    PRODUCTOS
-   100 EXACTOS
 ========================= */
 
-const categorias = {
+const productos = [
 
-    "Cargadores":[
+    {
+        id:1,
+        nombre:"Cable Micro USB Motorola V8 3.1",
+        categoria:"Cables",
+        precio:7500,
+        imagen:"1.jpg"
+    },
 
-        "Cargador USB-C 20W",
-        "Cargador USB-C 25W",
-        "Cargador USB-C 30W",
-        "Cargador USB-C 45W",
-        "Cargador rápido 18W",
-        "Cargador rápido 33W",
-        "Cargador doble USB",
-        "Cargador triple USB",
-        "Cargador para auto",
-        "Cargador inalámbrico",
-        "Cargador magnético",
-        "Cargador compacto",
-        "Cargador universal",
-        "Cargador premium",
-        "Cargador USB-C PD"
+    {
+        id:2,
+        nombre:"Adaptador de USB a SATA",
+        categoria:"Adaptadores",
+        precio:19500,
+        imagen:"2.jpg"
+    },
 
-    ],
+    {
+        id:3,
+        nombre:"Fuente Cargador Múltiple Universal Noga",
+        categoria:"Cargadores",
+        precio:25000,
+        imagen:"3.jpg"
+    },
 
-    "Auriculares":[
+    {
+        id:4,
+        nombre:"Adaptador Hub USB Tipo C",
+        categoria:"Adaptadores",
+        precio:22500,
+        imagen:"4.jpg"
+    },
 
-        "Auriculares Bluetooth",
-        "Auriculares inalámbricos",
-        "Auriculares deportivos",
-        "Auriculares TWS",
-        "Auriculares con micrófono",
-        "Auriculares gaming",
-        "Auriculares compactos",
-        "Auriculares premium",
-        "Auriculares estéreo",
-        "Auriculares deportivos Pro",
-        "Auriculares Bluetooth Pro",
-        "Auriculares TWS Pro",
-        "Auriculares con estuche",
-        "Auriculares manos libres",
-        "Auriculares para llamadas"
+    {
+        id:5,
+        nombre:"Cargador Malibu iPhone - CA Lightning",
+        categoria:"Cargadores",
+        precio:26500,
+        imagen:"5.jpg"
+    },
 
-    ],
+    {
+        id:6,
+        nombre:"Producto 6",
+        categoria:"Auriculares",
+        precio:0
+    },
 
-    "Fundas":[
+    {
+        id:7,
+        nombre:"Producto 7",
+        categoria:"Fundas",
+        precio:0
+    },
 
-        "Funda transparente",
-        "Funda antigolpes",
-        "Funda reforzada",
-        "Funda de silicona",
-        "Funda premium",
-        "Funda magnética",
-        "Funda tipo billetera",
-        "Funda con soporte",
-        "Funda con anillo",
-        "Funda transparente reforzada",
-        "Funda antigolpes Pro",
-        "Funda deportiva",
-        "Funda elegante",
-        "Funda mate",
-        "Funda resistente"
+    {
+        id:8,
+        nombre:"Producto 8",
+        categoria:"Cables",
+        precio:0
+    },
 
-    ],
+    {
+        id:9,
+        nombre:"Producto 9",
+        categoria:"Adaptadores",
+        precio:0
+    },
 
-    "Cables":[
+    {
+        id:10,
+        nombre:"Producto 10",
+        categoria:"Cargadores",
+        precio:0
+    },
 
-        "Cable USB-C",
-        "Cable USB-C rápido",
-        "Cable USB-C 1 metro",
-        "Cable USB-C 2 metros",
-        "Cable Lightning",
-        "Cable Lightning rápido",
-        "Cable Micro USB",
-        "Cable trenzado",
-        "Cable reforzado",
-        "Cable nylon",
-        "Cable magnético",
-        "Cable 3 en 1",
-        "Cable USB-C a USB-A",
-        "Cable USB-C a Lightning",
-        "Cable HDMI"
+    {
+        id:11,
+        nombre:"Producto 11",
+        categoria:"Gaming",
+        precio:0
+    },
 
-    ],
+    {
+        id:12,
+        nombre:"Producto 12",
+        categoria:"Power Banks",
+        precio:0
+    },
 
-    "Adaptadores":[
+    {
+        id:13,
+        nombre:"Producto 13",
+        categoria:"Auriculares",
+        precio:0
+    },
 
-        "Adaptador USB-C",
-        "Adaptador USB-C a USB",
-        "Adaptador Lightning",
-        "Adaptador HDMI",
-        "Adaptador USB-C HDMI",
-        "Adaptador USB-C audio",
-        "Adaptador OTG",
-        "Adaptador USB",
-        "Adaptador doble USB",
-        "Adaptador triple USB",
-        "Adaptador universal",
-        "Adaptador para auto",
-        "Adaptador de viaje",
-        "Adaptador de corriente",
-        "Adaptador rápido"
+    {
+        id:14,
+        nombre:"Producto 14",
+        categoria:"Fundas",
+        precio:0
+    },
 
-    ],
+    {
+        id:15,
+        nombre:"Producto 15",
+        categoria:"Cables",
+        precio:0
+    },
 
-    "Power Banks":[
+    {
+        id:16,
+        nombre:"Producto 16",
+        categoria:"Adaptadores",
+        precio:0
+    },
 
-        "Power Bank 5000mAh",
-        "Power Bank 10000mAh",
-        "Power Bank 20000mAh",
-        "Power Bank 30000mAh",
-        "Power Bank compacto",
-        "Power Bank rápido",
-        "Power Bank USB-C",
-        "Power Bank inalámbrico",
-        "Power Bank magnético",
-        "Power Bank LED"
+    {
+        id:17,
+        nombre:"Producto 17",
+        categoria:"Cargadores",
+        precio:0
+    },
 
-    ],
+    {
+        id:18,
+        nombre:"Producto 18",
+        categoria:"Gaming",
+        precio:0
+    },
 
-    "Gaming":[
+    {
+        id:19,
+        nombre:"Producto 19",
+        categoria:"Power Banks",
+        precio:0
+    },
 
-        "Mouse Gamer",
-        "Teclado Gamer",
-        "Mouse Pad Gamer",
-        "Headset Gamer",
-        "Control Bluetooth",
-        "Soporte para celular gamer",
-        "Ventilador para celular",
-        "Gamepad Bluetooth",
-        "Joystick para celular",
-        "Disparador gamer",
-        "Luz RGB",
-        "Micrófono Gamer",
-        "Webcam",
-        "Base para auriculares",
-        "Soporte para escritorio"
+    {
+        id:20,
+        nombre:"Producto 20",
+        categoria:"Auriculares",
+        precio:0
+    },
 
-    ]
+    {
+        id:21,
+        nombre:"Producto 21",
+        categoria:"Fundas",
+        precio:0
+    },
 
-};
+    {
+        id:22,
+        nombre:"Producto 22",
+        categoria:"Cables",
+        precio:0
+    },
 
-let productos = [];
+    {
+        id:23,
+        nombre:"Producto 23",
+        categoria:"Adaptadores",
+        precio:0
+    },
 
-let id = 1;
+    {
+        id:24,
+        nombre:"Producto 24",
+        categoria:"Cargadores",
+        precio:0
+    },
 
-for(
-    const categoria in categorias
-){
+    {
+        id:25,
+        nombre:"Producto 25",
+        categoria:"Gaming",
+        precio:0
+    },
 
-    categorias[categoria].forEach(
-        nombre => {
+    {
+        id:26,
+        nombre:"Producto 26",
+        categoria:"Power Banks",
+        precio:0
+    },
 
-            productos.push({
+    {
+        id:27,
+        nombre:"Producto 27",
+        categoria:"Auriculares",
+        precio:0
+    },
 
-                id:id,
+    {
+        id:28,
+        nombre:"Producto 28",
+        categoria:"Fundas",
+        precio:0
+    },
 
-                categoria:categoria,
+    {
+        id:29,
+        nombre:"Producto 29",
+        categoria:"Cables",
+        precio:0
+    },
 
-                nombre:nombre,
+    {
+        id:30,
+        nombre:"Producto 30",
+        categoria:"Adaptadores",
+        precio:0
+    },
 
-                precio:
-                    Math.floor(
-                        Math.random()*2700
-                    ) + 300
+    {
+        id:31,
+        nombre:"Producto 31",
+        categoria:"Cargadores",
+        precio:0
+    },
 
-            });
+    {
+        id:32,
+        nombre:"Producto 32",
+        categoria:"Gaming",
+        precio:0
+    },
 
-            id++;
+    {
+        id:33,
+        nombre:"Producto 33",
+        categoria:"Power Banks",
+        precio:0
+    },
 
-        }
-    );
+    {
+        id:34,
+        nombre:"Producto 34",
+        categoria:"Auriculares",
+        precio:0
+    },
 
-}
+    {
+        id:35,
+        nombre:"Producto 35",
+        categoria:"Fundas",
+        precio:0
+    },
+
+    {
+        id:36,
+        nombre:"Producto 36",
+        categoria:"Cables",
+        precio:0
+    },
+
+    {
+        id:37,
+        nombre:"Producto 37",
+        categoria:"Adaptadores",
+        precio:0
+    },
+
+    {
+        id:38,
+        nombre:"Producto 38",
+        categoria:"Cargadores",
+        precio:0
+    },
+
+    {
+        id:39,
+        nombre:"Producto 39",
+        categoria:"Gaming",
+        precio:0
+    },
+
+    {
+        id:40,
+        nombre:"Producto 40",
+        categoria:"Power Banks",
+        precio:0
+    },
+
+    {
+        id:41,
+        nombre:"Producto 41",
+        categoria:"Auriculares",
+        precio:0
+    },
+
+    {
+        id:42,
+        nombre:"Producto 42",
+        categoria:"Fundas",
+        precio:0
+    },
+
+    {
+        id:43,
+        nombre:"Producto 43",
+        categoria:"Cables",
+        precio:0
+    },
+
+    {
+        id:44,
+        nombre:"Producto 44",
+        categoria:"Adaptadores",
+        precio:0
+    },
+
+    {
+        id:45,
+        nombre:"Producto 45",
+        categoria:"Cargadores",
+        precio:0
+    },
+
+    {
+        id:46,
+        nombre:"Producto 46",
+        categoria:"Gaming",
+        precio:0
+    },
+
+    {
+        id:47,
+        nombre:"Producto 47",
+        categoria:"Power Banks",
+        precio:0
+    },
+
+    {
+        id:48,
+        nombre:"Producto 48",
+        categoria:"Auriculares",
+        precio:0
+    },
+
+    {
+        id:49,
+        nombre:"Producto 49",
+        categoria:"Fundas",
+        precio:0
+    },
+
+    {
+        id:50,
+        nombre:"Producto 50",
+        categoria:"Cables",
+        precio:0
+    },
+
+    {
+        id:51,
+        nombre:"Producto 51",
+        categoria:"Adaptadores",
+        precio:0
+    },
+
+    {
+        id:52,
+        nombre:"Producto 52",
+        categoria:"Cargadores",
+        precio:0
+    },
+
+    {
+        id:53,
+        nombre:"Producto 53",
+        categoria:"Gaming",
+        precio:0
+    },
+
+    {
+        id:54,
+        nombre:"Producto 54",
+        categoria:"Power Banks",
+        precio:0
+    },
+
+    {
+        id:55,
+        nombre:"Producto 55",
+        categoria:"Auriculares",
+        precio:0
+    },
+
+    {
+        id:56,
+        nombre:"Producto 56",
+        categoria:"Fundas",
+        precio:0
+    },
+
+    {
+        id:57,
+        nombre:"Producto 57",
+        categoria:"Cables",
+        precio:0
+    },
+
+    {
+        id:58,
+        nombre:"Producto 58",
+        categoria:"Gaming",
+        precio:0
+    }
+
+];
+
 
 let categoriaActual = "Todos";
 
@@ -1044,78 +1139,145 @@ let categoriaActual = "Todos";
 
 function mostrarProductos(lista){
 
-    const container =
-        document.getElementById(
-            "productosContainer"
-        );
+    const contenedor =
+        document.getElementById("products");
 
-    container.innerHTML = "";
+    contenedor.innerHTML = "";
 
-    if(lista.length === 0){
-
-        container.innerHTML = `
-
-            <div class="no-results">
-
-                No encontramos productos.
-
-            </div>
-
-        `;
-
-        return;
-
-    }
 
     lista.forEach(producto => {
 
-        const tarjeta =
-            document.createElement(
-                "article"
-            );
+        const card =
+            document.createElement("div");
 
-        tarjeta.className =
-            "product";
+        card.className = "product";
 
-        tarjeta.innerHTML = `
 
-            <div class="product-image">
+        let imagenHTML;
 
-                <div class="icon">
-                    📱
+
+        /* 1.jpg: NO TOCAR */
+
+        if(producto.id === 1){
+
+            imagenHTML = `
+
+                <div class="first-product-image">
+
+                    <img
+                        src="${producto.imagen}"
+                        alt="${producto.nombre}"
+                    >
+
                 </div>
 
-                <span>
-                    FOTO DEL PRODUCTO
-                </span>
+            `;
 
-            </div>
+        }
+
+
+        /* 2.jpg - 5.jpg: NUEVO RECORTE */
+
+        else if(
+            producto.id === 2 ||
+            producto.id === 3 ||
+            producto.id === 4 ||
+            producto.id === 5
+        ){
+
+            imagenHTML = `
+
+                <div class="product-image">
+
+                    <img
+                        src="${producto.imagen}"
+                        alt="${producto.nombre}"
+                    >
+
+                </div>
+
+            `;
+
+        }
+
+
+        /* PRODUCTOS SIN FOTO */
+
+        else{
+
+            imagenHTML = `
+
+                <div class="placeholder">
+
+                    FOTO DEL PRODUCTO
+
+                </div>
+
+            `;
+
+        }
+
+
+        let precioHTML;
+
+
+        if(producto.precio > 0){
+
+            precioHTML = `
+
+                <div class="price">
+
+                    $${producto.precio.toLocaleString("es-AR")}
+
+                </div>
+
+            `;
+
+        }
+
+        else{
+
+            precioHTML = `
+
+                <div class="price">
+
+                    Consultar
+
+                </div>
+
+            `;
+
+        }
+
+
+        card.innerHTML = `
+
+            ${imagenHTML}
 
             <div class="product-info">
 
-                <div class="product-category">
+                <div class="category">
+
                     ${producto.categoria}
+
                 </div>
 
                 <h3>
+
                     ${producto.nombre}
+
                 </h3>
 
-                <div class="price">
-                    $ ${producto.precio}
-                </div>
+                ${precioHTML}
 
                 <button
-                    class="buy"
-                    onclick="
-                        comprar(
-                            '${producto.nombre}',
-                            '${producto.precio}'
-                        )
-                    "
-                >
+                    class="buy-btn"
+                    onclick="comprar(
+                        '${producto.nombre.replace(/'/g,"\\'")}',
+                        ${producto.precio}
+                    )">
 
-                    💬 COMPRÁ AQUÍ VÍA WHATSAPP
+                    Comprar aquí vía WhatsApp
 
                 </button>
 
@@ -1123,9 +1285,8 @@ function mostrarProductos(lista){
 
         `;
 
-        container.appendChild(
-            tarjeta
-        );
+
+        contenedor.appendChild(card);
 
     });
 
@@ -1133,130 +1294,41 @@ function mostrarProductos(lista){
 
 
 /* =========================
-   FILTRAR
+   WHATSAPP
 ========================= */
 
-function filtrar(
-    categoria,
-    boton
-){
+function comprar(nombre,precio){
 
-    categoriaActual =
-        categoria;
-
-    document
-        .querySelectorAll(
-            ".filter-btn"
-        )
-        .forEach(
-            btn =>
-                btn.classList
-                .remove("active")
-        );
-
-    boton.classList.add(
-        "active"
-    );
-
-    actualizarProductos();
-
-}
+    let mensaje;
 
 
-/* =========================
-   BUSCAR
-========================= */
+    if(precio > 0){
 
-function buscar(){
-
-    actualizarProductos();
-
-}
-
-
-/* =========================
-   ACTUALIZAR
-========================= */
-
-function actualizarProductos(){
-
-    const texto =
-        document
-        .getElementById(
-            "buscador"
-        )
-        .value
-        .toLowerCase();
-
-    let lista =
-        productos;
-
-    if(
-        categoriaActual !== "Todos"
-    ){
-
-        lista =
-            lista.filter(
-                producto =>
-                    producto.categoria ===
-                    categoriaActual
-            );
+        mensaje =
+            "Hola DOC BROWN TECH 👋\n\n" +
+            "Quiero comprar:\n" +
+            nombre +
+            "\nPrecio: $" +
+            precio.toLocaleString("es-AR");
 
     }
 
-    if(texto){
+    else{
 
-        lista =
-            lista.filter(
-                producto =>
-                    producto.nombre
-                    .toLowerCase()
-                    .includes(texto)
-            );
+        mensaje =
+            "Hola DOC BROWN TECH 👋\n\n" +
+            "Quiero consultar por:\n" +
+            nombre;
 
     }
 
-    mostrarProductos(
-        lista
-    );
-
-}
-
-
-/* =========================
-   COMPRAR POR WHATSAPP
-========================= */
-
-function comprar(
-    nombre,
-    precio
-){
-
-    const mensaje =
-
-        "Hola DOC BROWN TECH 👋\n\n" +
-
-        "Quiero consultar por este producto:\n\n" +
-
-        nombre +
-
-        "\n\nPrecio mostrado: $" +
-
-        precio +
-
-        "\n\n¿Está disponible?";
 
     const url =
-
         "https://wa.me/" +
-
         NUMERO_WHATSAPP +
-
         "?text=" +
+        encodeURIComponent(mensaje);
 
-        encodeURIComponent(
-            mensaje
-        );
 
     window.open(
         url,
@@ -1267,68 +1339,72 @@ function comprar(
 
 
 /* =========================
-   WHATSAPP GENERAL
+   FILTROS
 ========================= */
 
-const mensajeGeneral =
+function filtrar(categoria,boton){
 
-    "Hola DOC BROWN TECH 👋 " +
-    "Quiero consultar por sus productos.";
+    categoriaActual = categoria;
 
-const urlWhatsApp =
-
-    "https://wa.me/" +
-
-    NUMERO_WHATSAPP +
-
-    "?text=" +
-
-    encodeURIComponent(
-        mensajeGeneral
-    );
-
-document
-    .getElementById(
-        "heroWhatsapp"
-    )
-    .href =
-    urlWhatsApp;
-
-document
-    .getElementById(
-        "contactWhatsapp"
-    )
-    .href =
-    urlWhatsApp;
-
-
-/* =========================
-   MENÚ CELULAR
-========================= */
-
-function toggleMenu(){
 
     document
-        .getElementById(
-            "nav"
-        )
-        .classList
-        .toggle(
-            "show"
-        );
+        .querySelectorAll(".filter-btn")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+    boton.classList.add("active");
+
+
+    aplicarFiltros();
+
+}
+
+
+function aplicarFiltros(){
+
+    const resultado =
+        productos.filter(producto => {
+
+            const coincideCategoria =
+                categoriaActual === "Todos" ||
+                producto.categoria === categoriaActual;
+
+            return coincideCategoria;
+
+        });
+
+
+    mostrarProductos(resultado);
 
 }
 
 
 /* =========================
-   INICIAR
+   MENÚ
 ========================= */
 
-mostrarProductos(
-    productos
-);
+function toggleMenu(){
+
+    document
+        .getElementById("menu")
+        .classList
+        .toggle("show");
+
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+mostrarProductos(productos);
 
 </script>
 
 </body>
+
 </html>
