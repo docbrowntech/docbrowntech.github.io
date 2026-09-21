@@ -24,25 +24,16 @@ body{
     color:white;
 }
 
-/* =========================
-   HEADER
-========================= */
-
 header{
     position:sticky;
     top:0;
     z-index:1000;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:15px 5%;
-
     background:rgba(3,5,8,.96);
-
     border-bottom:1px solid rgba(0,217,255,.25);
-
     box-shadow:0 5px 25px rgba(0,0,0,.5);
 }
 
@@ -78,22 +69,13 @@ nav a:hover{
     cursor:pointer;
 }
 
-
-/* =========================
-   PORTADA
-========================= */
-
 .hero{
     min-height:calc(100vh - 70px);
-
     padding:35px 20px 80px;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
     background:
         radial-gradient(
             circle at 50% 35%,
@@ -102,7 +84,6 @@ nav a:hover{
             #05070a 62%,
             #000 100%
         );
-
     overflow:hidden;
 }
 
@@ -111,24 +92,13 @@ nav a:hover{
     max-width:1200px;
 }
 
-
-/* =========================
-   IMAGEN PRINCIPAL
-========================= */
-
 .image-frame{
-
     position:relative;
-
     width:100%;
     max-width:950px;
-
     margin:0 auto 35px;
-
     padding:12px;
-
     border-radius:35px;
-
     background:
         linear-gradient(
             135deg,
@@ -138,50 +108,30 @@ nav a:hover{
             #ff7b00,
             #00d9ff
         );
-
     box-shadow:
         0 0 20px rgba(0,217,255,.35),
         0 0 50px rgba(0,100,255,.20),
         0 20px 70px rgba(0,0,0,.6);
-
     overflow:hidden;
 }
 
-
-/* brillo interior */
-
 .image-frame::before{
-
     content:"";
-
     position:absolute;
-
     inset:3px;
-
     border-radius:31px;
-
     border:1px solid rgba(255,255,255,.45);
-
     pointer-events:none;
-
     z-index:2;
 }
 
-
-/* brillo animado */
-
 .image-frame::after{
-
     content:"";
-
     position:absolute;
-
     width:45%;
     height:180%;
-
     top:-40%;
     left:-70%;
-
     background:
         linear-gradient(
             90deg,
@@ -189,76 +139,36 @@ nav a:hover{
             rgba(255,255,255,.25),
             transparent
         );
-
     transform:rotate(25deg);
-
     animation:shine 5s infinite;
-
     pointer-events:none;
-
     z-index:3;
 }
 
 @keyframes shine{
-
-    0%{
-        left:-70%;
-    }
-
-    45%{
-        left:130%;
-    }
-
-    100%{
-        left:130%;
-    }
-
+    0%{left:-70%;}
+    45%{left:130%;}
+    100%{left:130%;}
 }
 
-
-/*
-   La imagen original no se modifica.
-
-   El negro se integra con el fondo
-   mediante screen.
-*/
-
 .hero-image{
-
     position:relative;
-
     display:block;
-
     width:100%;
     height:auto;
-
     border-radius:27px;
-
     mix-blend-mode:screen;
-
     z-index:1;
-
     filter:
         contrast(1.04)
         saturate(1.06);
-
 }
 
-
-/* =========================
-   TITULO
-========================= */
-
 .hero h1{
-
     font-size:clamp(40px,7vw,78px);
-
     font-weight:900;
-
     margin-bottom:15px;
-
     letter-spacing:1px;
-
     text-shadow:
         0 0 20px rgba(0,217,255,.25);
 }
@@ -268,126 +178,75 @@ nav a:hover{
 }
 
 .hero-text{
-
     max-width:850px;
-
     margin:0 auto 30px;
-
     color:#ddd;
-
     font-size:clamp(18px,3vw,25px);
-
     line-height:1.5;
 }
 
-
-/* =========================
-   BOTONES
-========================= */
-
 .buttons{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     flex-wrap:wrap;
-
     gap:15px;
 }
 
 .btn{
-
     display:inline-block;
-
     padding:15px 25px;
-
     border-radius:30px;
-
     text-decoration:none;
-
     font-weight:900;
-
     transition:.25s;
-
     border:1px solid transparent;
 }
 
 .btn:hover{
-
     transform:translateY(-3px) scale(1.02);
-
 }
 
 .btn-products{
-
     background:#00d9ff;
-
     color:#001015;
-
     box-shadow:
         0 0 20px rgba(0,217,255,.25);
 }
 
 .btn-whatsapp{
-
     background:#20c967;
-
     color:white;
-
     box-shadow:
         0 0 20px rgba(32,201,103,.2);
 }
-
-
-/* =========================
-   SECCIONES
-========================= */
 
 section{
     padding:65px 5%;
 }
 
 .container{
-
     width:100%;
-
     max-width:1400px;
-
     margin:auto;
 }
 
 .section-title{
-
     text-align:center;
-
     margin-bottom:30px;
 }
 
 .section-title h2{
-
     font-size:clamp(30px,5vw,45px);
-
     margin-bottom:10px;
 }
 
 .section-title p{
-
     color:#aaa;
-
 }
 
-
-/* =========================
-   PRODUCTOS
-========================= */
-
 #productos{
-
     background:
-
         radial-gradient(
             circle at top,
             #071820,
@@ -396,505 +255,298 @@ section{
         );
 }
 
-
-/* =========================
-   FILTROS
-========================= */
-
 .filters{
-
     display:flex;
-
     justify-content:center;
-
     flex-wrap:wrap;
-
     gap:10px;
-
     margin-bottom:30px;
 }
 
 .filter-btn{
-
     background:#151a1f;
-
     color:white;
-
     border:1px solid #303841;
-
     padding:11px 18px;
-
     border-radius:30px;
-
     cursor:pointer;
-
     font-weight:bold;
-
     transition:.2s;
 }
 
 .filter-btn:hover,
 .filter-btn.active{
-
     background:#00d9ff;
-
     color:#001015;
-
     border-color:#00d9ff;
-
     box-shadow:
         0 0 15px rgba(0,217,255,.2);
 }
 
-
-/* =========================
-   BUSCADOR
-========================= */
-
 .search{
-
     display:block;
-
     width:100%;
-
     max-width:600px;
-
     margin:0 auto 35px;
-
     padding:16px 22px;
-
     border-radius:30px;
-
     border:2px solid #292f36;
-
     outline:none;
-
     background:#12161a;
-
     color:white;
-
     font-size:16px;
 }
 
 .search:focus{
-
     border-color:#00d9ff;
-
     box-shadow:
         0 0 15px rgba(0,217,255,.12);
 }
 
 .search::placeholder{
-
     color:#777;
 }
 
-
-/* =========================
-   PRODUCTOS GRID
-========================= */
-
 .products{
-
     display:grid;
-
     grid-template-columns:
         repeat(auto-fill,minmax(230px,1fr));
-
     gap:22px;
 }
 
-
-/* =========================
-   TARJETA
-========================= */
-
 .product{
-
     background:
         linear-gradient(
             145deg,
             #151a1f,
             #0c0f12
         );
-
     border:1px solid #293039;
-
     border-radius:18px;
-
     overflow:hidden;
-
     transition:.25s;
 }
 
 .product:hover{
-
     transform:translateY(-6px);
-
     border-color:#00d9ff;
-
     box-shadow:
         0 12px 35px rgba(0,217,255,.12);
 }
 
-
-/* =========================
-   FOTO PRODUCTO
-========================= */
-
 .product-image{
-
     height:220px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     flex-direction:column;
-
     text-align:center;
-
     color:#68727b;
-
     font-weight:bold;
-
     background:
         linear-gradient(
             135deg,
             #20262c,
             #0b0e11
         );
-
     border-bottom:1px solid #252b31;
 }
 
 .product-image .icon{
-
     font-size:45px;
-
     margin-bottom:10px;
 }
 
-
-/* =========================
-   INFORMACION PRODUCTO
-========================= */
-
 .product-info{
-
     padding:18px;
 }
 
 .product-category{
-
     color:#00d9ff;
-
     font-size:12px;
-
     font-weight:bold;
-
     text-transform:uppercase;
 }
 
 .product h3{
-
     margin:8px 0;
-
     font-size:18px;
-
     min-height:42px;
 }
 
 .price{
-
     font-size:24px;
-
     font-weight:900;
-
     margin:14px 0;
 }
 
 .buy{
-
     width:100%;
-
     border:none;
-
     border-radius:10px;
-
     padding:13px 8px;
-
     background:#20c967;
-
     color:white;
-
     font-weight:900;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
 .buy:hover{
-
     background:#18ad58;
-
     transform:translateY(-2px);
 }
 
-
-/* =========================
-   INFORMACION
-========================= */
-
 .about{
-
     background:#101419;
 }
 
 .about-box{
-
     max-width:900px;
-
     margin:auto;
-
     text-align:center;
-
     color:#d0d0d0;
-
     font-size:18px;
-
     line-height:1.8;
 }
 
-
-/* =========================
-   CONTACTO
-========================= */
-
 #contacto{
-
     background:
-
         linear-gradient(
             135deg,
             #071a24,
             #08090b
         );
-
     text-align:center;
 }
 
 .socials{
-
     display:flex;
-
     justify-content:center;
-
     flex-wrap:wrap;
-
     gap:12px;
-
     margin-top:25px;
 }
 
 .social{
-
     display:inline-block;
-
     padding:13px 20px;
-
     border-radius:30px;
-
     background:#171b20;
-
     color:white;
-
     text-decoration:none;
-
     font-weight:bold;
-
     border:1px solid #292f35;
-
     transition:.2s;
 }
 
 .social:hover{
-
     border-color:#00d9ff;
-
     transform:translateY(-2px);
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
 footer{
-
     background:#020304;
-
     color:#777;
-
     text-align:center;
-
     padding:25px;
 }
 
-
-/* =========================
-   SIN RESULTADOS
-========================= */
-
 .no-results{
-
     grid-column:1/-1;
-
     text-align:center;
-
     color:#777;
-
     padding:50px;
 }
-
-
-/* =========================
-   CELULAR
-========================= */
 
 @media(max-width:750px){
 
     header{
-
         padding:14px 5%;
     }
 
     nav{
-
         display:none;
-
         position:absolute;
-
         top:65px;
-
         left:0;
-
         right:0;
-
         background:#080a0d;
-
         flex-direction:column;
-
         padding:20px;
-
         text-align:center;
     }
 
     nav.show{
-
         display:flex;
     }
 
     .menu{
-
         display:block;
     }
 
     .hero{
-
         padding-top:20px;
-
         min-height:auto;
     }
 
     .image-frame{
-
         padding:7px;
-
         border-radius:22px;
-
         margin-bottom:25px;
     }
 
     .image-frame::before{
-
         border-radius:19px;
     }
 
     .hero-image{
-
         border-radius:17px;
     }
 
     .products{
-
         grid-template-columns:repeat(2,1fr);
-
         gap:12px;
     }
 
     .product-image{
-
         height:170px;
     }
 
     .product-info{
-
         padding:12px;
     }
 
     .product h3{
-
         font-size:15px;
     }
 
     .price{
-
         font-size:19px;
     }
 
     .buy{
-
         font-size:12px;
-
         padding:11px 5px;
     }
-
 }
-
 
 @media(max-width:430px){
 
     .products{
-
         grid-template-columns:1fr;
     }
 
     .product-image{
-
         height:210px;
     }
 
 }
 
-
-/* =========================
-   FIN
-========================= */
-
 </style>
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
@@ -927,28 +579,12 @@ footer{
 
 </header>
 
-
-<!-- =========================
-     PORTADA
-========================= -->
-
 <section
     class="hero"
     id="inicio"
 >
 
     <div class="hero-content">
-
-
-        <!--
-        IMAGEN PRINCIPAL
-
-        Archivo:
-        Img.jpg
-
-        Debe estar en la misma carpeta
-        que index.html.
-        -->
 
         <div class="image-frame">
 
@@ -960,13 +596,9 @@ footer{
 
         </div>
 
-
         <h1>
-
             DOC <span>BROWN TECH</span>
-
         </h1>
-
 
         <p class="hero-text">
 
@@ -980,7 +612,6 @@ footer{
 
         </p>
 
-
         <div class="buttons">
 
             <a
@@ -989,7 +620,6 @@ footer{
             >
                 🛒 VER PRODUCTOS
             </a>
-
 
             <a
                 id="heroWhatsapp"
@@ -1006,15 +636,9 @@ footer{
 
 </section>
 
-
-<!-- =========================
-     PRODUCTOS
-========================= -->
-
 <section id="productos">
 
     <div class="container">
-
 
         <div class="section-title">
 
@@ -1028,11 +652,7 @@ footer{
 
         </div>
 
-
-        <!-- FILTROS -->
-
         <div class="filters">
-
 
             <button
                 class="filter-btn active"
@@ -1041,14 +661,12 @@ footer{
                 Todos
             </button>
 
-
             <button
                 class="filter-btn"
                 onclick="filtrar('Cargadores',this)"
             >
                 🔌 Cargadores
             </button>
-
 
             <button
                 class="filter-btn"
@@ -1057,14 +675,12 @@ footer{
                 🎧 Auriculares
             </button>
 
-
             <button
                 class="filter-btn"
                 onclick="filtrar('Fundas',this)"
             >
                 📱 Fundas
             </button>
-
 
             <button
                 class="filter-btn"
@@ -1073,7 +689,6 @@ footer{
                 🔗 Cables
             </button>
 
-
             <button
                 class="filter-btn"
                 onclick="filtrar('Adaptadores',this)"
@@ -1081,14 +696,12 @@ footer{
                 🔌 Adaptadores
             </button>
 
-
             <button
                 class="filter-btn"
                 onclick="filtrar('Power Banks',this)"
             >
                 🔋 Power Banks
             </button>
-
 
             <button
                 class="filter-btn"
@@ -1099,9 +712,6 @@ footer{
 
         </div>
 
-
-        <!-- BUSCADOR -->
-
         <input
             id="buscador"
             class="search"
@@ -1109,9 +719,6 @@ footer{
             placeholder="🔎 Buscar un producto..."
             oninput="buscar()"
         >
-
-
-        <!-- PRODUCTOS -->
 
         <div
             id="productosContainer"
@@ -1121,11 +728,6 @@ footer{
     </div>
 
 </section>
-
-
-<!-- =========================
-     INFORMACION
-========================= -->
 
 <section class="about">
 
@@ -1139,7 +741,6 @@ footer{
 
         </div>
 
-
         <div class="about-box">
 
             <p>
@@ -1151,9 +752,7 @@ footer{
 
             </p>
 
-
             <br>
-
 
             <p>
 
@@ -1172,15 +771,9 @@ footer{
 
 </section>
 
-
-<!-- =========================
-     CONTACTO
-========================= -->
-
 <section id="contacto">
 
     <div class="container">
-
 
         <div class="section-title">
 
@@ -1193,7 +786,6 @@ footer{
             </p>
 
         </div>
-
 
         <div class="buttons">
 
@@ -1208,9 +800,7 @@ footer{
 
         </div>
 
-
         <div class="socials">
-
 
             <a
                 href="#"
@@ -1220,7 +810,6 @@ footer{
                 📘 Facebook
             </a>
 
-
             <a
                 href="#"
                 target="_blank"
@@ -1228,7 +817,6 @@ footer{
             >
                 🎵 TikTok
             </a>
-
 
             <a
                 href="#"
@@ -1244,11 +832,6 @@ footer{
 
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
     © 2026 DOC BROWN TECH
@@ -1256,27 +839,23 @@ footer{
 
 </footer>
 
-
 <script>
-
 
 /* =========================
    WHATSAPP
 ========================= */
 
 /*
-   CAMBIÁ ESTE NÚMERO POR
-   EL WHATSAPP DEL VENDEDOR.
+   WhatsApp de DOC BROWN TECH
 
-   Uruguay:
-
-   59899123456
+   Número:
+   +54 9 11 4404-1909
 
    Sin +, espacios ni guiones.
 */
 
 const NUMERO_WHATSAPP =
-    "598XXXXXXXX";
+    "5491144041909";
 
 
 /* =========================
@@ -1285,7 +864,6 @@ const NUMERO_WHATSAPP =
 ========================= */
 
 const categorias = {
-
 
     "Cargadores":[
 
@@ -1307,7 +885,6 @@ const categorias = {
 
     ],
 
-
     "Auriculares":[
 
         "Auriculares Bluetooth",
@@ -1327,7 +904,6 @@ const categorias = {
         "Auriculares para llamadas"
 
     ],
-
 
     "Fundas":[
 
@@ -1349,7 +925,6 @@ const categorias = {
 
     ],
 
-
     "Cables":[
 
         "Cable USB-C",
@@ -1369,7 +944,6 @@ const categorias = {
         "Cable HDMI"
 
     ],
-
 
     "Adaptadores":[
 
@@ -1391,7 +965,6 @@ const categorias = {
 
     ],
 
-
     "Power Banks":[
 
         "Power Bank 5000mAh",
@@ -1406,7 +979,6 @@ const categorias = {
         "Power Bank LED"
 
     ],
-
 
     "Gaming":[
 
@@ -1430,15 +1002,9 @@ const categorias = {
 
 };
 
-
-/* =========================
-   GENERAR LOS 100
-========================= */
-
 let productos = [];
 
 let id = 1;
-
 
 for(
     const categoria in categorias
@@ -1469,7 +1035,6 @@ for(
 
 }
 
-
 let categoriaActual = "Todos";
 
 
@@ -1484,9 +1049,7 @@ function mostrarProductos(lista){
             "productosContainer"
         );
 
-
     container.innerHTML = "";
-
 
     if(lista.length === 0){
 
@@ -1504,62 +1067,43 @@ function mostrarProductos(lista){
 
     }
 
-
     lista.forEach(producto => {
-
 
         const tarjeta =
             document.createElement(
                 "article"
             );
 
-
         tarjeta.className =
             "product";
-
 
         tarjeta.innerHTML = `
 
             <div class="product-image">
 
                 <div class="icon">
-
                     📱
-
                 </div>
 
                 <span>
-
                     FOTO DEL PRODUCTO
-
                 </span>
 
             </div>
 
-
             <div class="product-info">
 
-
                 <div class="product-category">
-
                     ${producto.categoria}
-
                 </div>
-
 
                 <h3>
-
                     ${producto.nombre}
-
                 </h3>
 
-
                 <div class="price">
-
                     $ ${producto.precio}
-
                 </div>
-
 
                 <button
                     class="buy"
@@ -1575,11 +1119,9 @@ function mostrarProductos(lista){
 
                 </button>
 
-
             </div>
 
         `;
-
 
         container.appendChild(
             tarjeta
@@ -1602,7 +1144,6 @@ function filtrar(
     categoriaActual =
         categoria;
 
-
     document
         .querySelectorAll(
             ".filter-btn"
@@ -1613,11 +1154,9 @@ function filtrar(
                 .remove("active")
         );
 
-
     boton.classList.add(
         "active"
     );
-
 
     actualizarProductos();
 
@@ -1649,10 +1188,8 @@ function actualizarProductos(){
         .value
         .toLowerCase();
 
-
     let lista =
         productos;
-
 
     if(
         categoriaActual !== "Todos"
@@ -1667,7 +1204,6 @@ function actualizarProductos(){
 
     }
 
-
     if(texto){
 
         lista =
@@ -1679,7 +1215,6 @@ function actualizarProductos(){
             );
 
     }
-
 
     mostrarProductos(
         lista
@@ -1711,7 +1246,6 @@ function comprar(
 
         "\n\n¿Está disponible?";
 
-
     const url =
 
         "https://wa.me/" +
@@ -1723,7 +1257,6 @@ function comprar(
         encodeURIComponent(
             mensaje
         );
-
 
     window.open(
         url,
@@ -1742,7 +1275,6 @@ const mensajeGeneral =
     "Hola DOC BROWN TECH 👋 " +
     "Quiero consultar por sus productos.";
 
-
 const urlWhatsApp =
 
     "https://wa.me/" +
@@ -1755,14 +1287,12 @@ const urlWhatsApp =
         mensajeGeneral
     );
 
-
 document
     .getElementById(
         "heroWhatsapp"
     )
     .href =
     urlWhatsApp;
-
 
 document
     .getElementById(
