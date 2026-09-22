@@ -95,10 +95,31 @@ nav a:hover{
     max-width:800px;
 }
 
+/* EFECTO MOVIMIENTO Y BRILLO EN EL TÍTULO */
+@keyframes tituloAnimado {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    }
+    50% {
+        transform: scale(1.03);
+        text-shadow: 0 0 35px rgba(0, 229, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    }
+}
+
 .hero h1{
-    font-size:45px;
+    font-size:48px;
     margin-bottom:15px;
-    color:#00e5ff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #00e5ff 0%, #ffffff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: tituloAnimado 3s ease-in-out infinite;
 }
 
 .hero p{
@@ -316,6 +337,31 @@ nav a:hover{
 
 
 /* =========================
+   BANNER CONSULTA EXTRA (AL FINAL)
+========================= */
+
+.extra-consulta{
+    background: linear-gradient(135deg, #101820, #15222b);
+    border-top: 1px solid #00e5ff;
+    border-bottom: 1px solid #00e5ff;
+    padding: 35px 5%;
+    text-align: center;
+}
+
+.extra-consulta h3{
+    color: #00e5ff;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.extra-consulta p{
+    color: #bfc7cc;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
    CONTACTO
 ========================= */
 
@@ -486,6 +532,15 @@ footer strong{
 
     <div class="products" id="products"></div>
 </section>
+
+<!-- =========================
+     BANNER CONSULTA EXTRA (AL FINAL)
+========================= -->
+<div class="extra-consulta">
+    <h3>¿Buscás algo más?</h3>
+    <p>Consulta aquí por más productos y ofertas</p>
+    <a class="btn" href="https://wa.me/5491144041909?text=Hola%20DOC%20BROWN%20TECH%20👋%20Quiero%20consultar%20por%20más%20productos%20y%20ofertas" target="_blank">📲 Consulta aquí</a>
+</div>
 
 <!-- =========================
      CONTACTO
@@ -793,112 +848,130 @@ const productos = [
         imagen:"40.jpg"
     },
     {
-        id:41,
-        nombre:"Producto 41",
-        categoria:"Auriculares",
-        precio:0
+        id: 41,
+        nombre: "SOPORTE PARABRISAS CORTO",
+        categoria: "Adaptadores",
+        precio: 21500,
+        imagen: "41.jpg"
     },
     {
-        id:42,
-        nombre:"Producto 42",
-        categoria:"Fundas",
-        precio:0
+        id: 42,
+        nombre: "SAMSUNG GALAXY TOUR PRO 4",
+        categoria: "Auriculares",
+        precio: 50000,
+        imagen: "42.jpg"
     },
     {
-        id:43,
-        nombre:"Producto 43",
-        categoria:"Cables",
-        precio:0
+        id: 43,
+        nombre: "JBL TOUR PRO 4",
+        categoria: "Auriculares",
+        precio: 50000,
+        imagen: "43.jpg"
     },
     {
-        id:44,
-        nombre:"Producto 44",
-        categoria:"Adaptadores",
-        precio:0
+        id: 44,
+        nombre: "SAMSUNG GALAXY BUDS 3",
+        categoria: "Auriculares",
+        precio: 60000,
+        imagen: "44.jpg"
     },
     {
-        id:45,
-        nombre:"Producto 45",
-        categoria:"Cargadores",
-        precio:0
+        id: 45,
+        nombre: "AURICULARES TIPO AIR PODS",
+        categoria: "Auriculares",
+        precio: 25000,
+        imagen: "45.jpg"
     },
     {
-        id:46,
-        nombre:"Producto 46",
-        categoria:"Gaming",
-        precio:0
+        id: 46,
+        nombre: "AURICULARES TIPO AIR PODS PRO 2gen",
+        categoria: "Auriculares",
+        precio: 60000,
+        imagen: "46.jpg"
     },
     {
-        id:47,
-        nombre:"Producto 47",
-        categoria:"Power Banks",
-        precio:0
+        id: 47,
+        nombre: "AURICULAR INALAMBRICO MALIBU",
+        categoria: "Auriculares",
+        precio: 18500,
+        imagen: "47.jpg"
     },
     {
-        id:48,
-        nombre:"Producto 48",
-        categoria:"Auriculares",
-        precio:0
+        id: 48,
+        nombre: "AURICULARES INALAMBRICOS TWS",
+        categoria: "Auriculares",
+        precio: 22500,
+        imagen: "48.jpg"
     },
     {
-        id:49,
-        nombre:"Producto 49",
-        categoria:"Fundas",
-        precio:0
+        id: 49,
+        nombre: "AURICULARES INALAMBRICOS E6S",
+        categoria: "Auriculares",
+        precio: 18500,
+        imagen: "49.jpg"
     },
     {
-        id:50,
-        nombre:"Producto 50",
-        categoria:"Cables",
-        precio:0
+        id: 50,
+        nombre: "AURICULAR INALAMBRICO MALIBU",
+        categoria: "Auriculares",
+        precio: 14500,
+        imagen: "50.jpg"
     },
     {
-        id:51,
-        nombre:"Producto 51",
-        categoria:"Adaptadores",
-        precio:0
+        id: 51,
+        nombre: "AIR PODS 2 GENERACION",
+        categoria: "Auriculares",
+        precio: 60000,
+        imagen: "51.jpg"
     },
     {
-        id:52,
-        nombre:"Producto 52",
-        categoria:"Cargadores",
-        precio:0
+        id: 52,
+        nombre: "XIAOMI REDMI BUDS 4 ACTIVE",
+        categoria: "Auriculares",
+        precio: 48500,
+        imagen: "52.jpg"
     },
     {
-        id:53,
-        nombre:"Producto 53",
-        categoria:"Gaming",
-        precio:0
+        id: 53,
+        nombre: "XIAOMI REDMI BUDS 6 PLAY",
+        categoria: "Auriculares",
+        precio: 52500,
+        imagen: "53.jpg"
     },
     {
-        id:54,
-        nombre:"Producto 54",
-        categoria:"Power Banks",
-        precio:0
+        id: 54,
+        nombre: "AURICULARES INALÁMBRICO HAYLOU",
+        categoria: "Auriculares",
+        precio: 40000,
+        imagen: "54.jpg"
     },
     {
-        id:55,
-        nombre:"Producto 55",
-        categoria:"Auriculares",
-        precio:0
+        id: 55,
+        nombre: "AURICULAR SAMSUNG AKG",
+        categoria: "Auriculares",
+        precio: 19500,
+        imagen: "55.jpg"
     },
     {
-        id:56,
-        nombre:"Producto 56",
-        categoria:"Fundas",
-        precio:0
+        id: 56,
+        nombre: "AURICULARES CON CABLE ROYALCELL",
+        categoria: "Auriculares",
+        precio: 15500,
+        imagen: "56.jpg"
     },
     {
-        id:57,
-        nombre:"Producto 57",
-        categoria:"Cables",
-        precio:0
+        id: 57,
+        nombre: "AURICULARES CON CABLE MOBILE 3,5MM",
+        categoria: "Auriculares",
+        precio: 18500,
+        imagen: "57.jpg"
     },
     {
-        id:58,
-        nombre:"Producto 58",
-        categoria:"Gaming",
-        precio:0
+        id: 58,
+        nombre: "CABLE MICRO USB OTTAWA",
+        categoria: "Cables",
+        precio: 8500,
+        imagen: "58.jpg"
     }
 ];
 
